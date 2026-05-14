@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stringing — Tennis Line</title>
+  <meta name="description" content="Book a pro stringing job at Tennis Line. 48-hour turnaround." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Tennis Line home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 8 H14 V12 H9 V26 H5 V12 H1 Z" fill="#1FA89A"/>
+            <circle cx="7" cy="5" r="2" fill="#1F3357"/>
+            <path d="M16 8 H20 V22 H31 V26 H16 Z" fill="#1F3357"/>
+          </svg>
+        </span>
+        <span class="brand-word"><span class="brand-t">Tennis</span> <span class="brand-l">Line</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#racquets">Racquets</a>
+        <a href="index.html#strings">Strings</a>
+        <a href="index.html#apparel">Apparel</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="cart-btn" href="index.html#shop" aria-label="Back to shop">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="service-page">
+    <div class="container">
+      <div class="service-page-head">
+        <span class="eyebrow eyebrow--light">Service · Stringing</span>
+        <h1>Book a stringing job.</h1>
+        <p>48-hour turnaround, $20 per racquet. Drop off in person or post it in — we'll confirm by email and log your setup so it's a one-click reorder next time.</p>
+      </div>
+
+      <form class="service-form" id="stringingForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="sName">Your name</label>
+            <input id="sName" name="name" type="text" required autocomplete="name" placeholder="First and last" />
+          </div>
+          <div class="field">
+            <label for="sEmail">Email</label>
+            <input id="sEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com" />
+          </div>
+          <div class="field field--full">
+            <label for="sStringType">String type</label>
+            <select id="sStringType" name="stringType" required>
+              <option value="">Pick a string type…</option>
+              <option value="poly">Co-polyester (poly) — durable, control</option>
+              <option value="multi">Multifilament — soft, arm-friendly</option>
+              <option value="gut">Natural gut — premium feel</option>
+              <option value="hybrid">Hybrid (poly + multi)</option>
+              <option value="synthetic">Synthetic gut — entry-level</option>
+              <option value="recommend">Not sure — recommend a string for me</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="sTension">Tension (lbs)</label>
+            <input id="sTension" name="tension" type="number" min="40" max="70" placeholder="e.g. 52" />
+          </div>
+          <div class="field">
+            <label for="sRacquet">Racquet model</label>
+            <input id="sRacquet" name="racquet" type="text" placeholder="e.g. Blade Pro 98" />
+          </div>
+          <div class="field field--full">
+            <label for="sNotes">Notes (optional)</label>
+            <textarea id="sNotes" name="notes" rows="3" placeholder="Anything we should know — old setup, arm issues, gauge preferences…"></textarea>
+          </div>
+        </div>
+        <div class="form-foot">
+          <button type="submit" class="btn btn-primary">Send stringing request</button>
+          <span class="form-note">We confirm by email within 4 hours during business hours.</span>
+        </div>
+      </form>
+
+      <div class="form-success" id="formSuccess" hidden>
+        <div class="form-success-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h2>Stringing request received.</h2>
+        <p>We'll email you within 4 hours during business hours to confirm string, tension and drop-off. Bring your racquet to the shop or post it in and we'll have it back in 48 hours.</p>
+        <a href="index.html" class="btn btn-primary">Back to home</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand brand--footer">
+          <span class="brand-mark"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8 H14 V12 H9 V26 H5 V12 H1 Z" fill="#1FA89A"/><circle cx="7" cy="5" r="2" fill="#D8FF3E"/><path d="M16 8 H20 V22 H31 V26 H16 Z" fill="#FFFFFF"/></svg></span>
+          <span class="brand-word"><span class="brand-t">Tennis</span> <span class="brand-l">Line</span></span>
+        </div>
+        <p class="muted">Tennis gear for every level. Shipped from London.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul><li><a href="index.html#racquets">Racquets</a></li><li><a href="index.html#strings">Strings</a></li><li><a href="index.html#apparel">Apparel</a></li></ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="stringing.html">Stringing</a></li><li><a href="court-hire.html">Court hire</a></li><li><a href="coaching.html">Coaching</a></li></ul>
+      </div>
+      <div>
+        <h4>Tennis Line</h4>
+        <ul><li><a href="index.html#about">About</a></li><li><a href="index.html">Home</a></li></ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Tennis Line Ltd.</span>
+      <span class="muted">Made with topspin.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="config.js"></script>
+  <script>
+    // Cart count badge from localStorage
+    try {
+      const cart = JSON.parse(localStorage.getItem('tennisline:cart') || '[]');
+      const count = cart.reduce((n, i) => n + (i.qty || 0), 0);
+      const cartEl = document.getElementById('cartCount');
+      if (cartEl) {
+        cartEl.textContent = count;
+        cartEl.style.display = count ? 'inline-flex' : 'none';
+      }
+    } catch {}
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Form submission
+    const form = document.getElementById('stringingForm');
+    const success = document.getElementById('formSuccess');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      const fd = new FormData(form);
+      const tensionRaw = fd.get('tension');
+      const payload = {
+        name: fd.get('name'),
+        email: fd.get('email'),
+        string_type: fd.get('stringType'),
+        tension: tensionRaw ? parseInt(tensionRaw, 10) : null,
+        racquet_model: fd.get('racquet') || null,
+        notes: fd.get('notes') || null,
+      };
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true; const orig = btn.textContent; btn.textContent = 'Sending…';
+      const { error } = await sb.from('stringing_requests').insert(payload);
+      btn.disabled = false; btn.textContent = orig;
+      if (error) {
+        alert("Sorry — that didn't go through.\n\n" + (error.message || 'Unknown error'));
+        return;
+      }
+      form.hidden = true;
+      success.hidden = false;
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  </script>
+</body>
+</html>

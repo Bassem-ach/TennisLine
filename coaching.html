@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coaching — Tennis Line</title>
+  <meta name="description" content="Book lessons with Tennis Line's certified coaches." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Tennis Line home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 8 H14 V12 H9 V26 H5 V12 H1 Z" fill="#1FA89A"/>
+            <circle cx="7" cy="5" r="2" fill="#1F3357"/>
+            <path d="M16 8 H20 V22 H31 V26 H16 Z" fill="#1F3357"/>
+          </svg>
+        </span>
+        <span class="brand-word"><span class="brand-t">Tennis</span> <span class="brand-l">Line</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#racquets">Racquets</a>
+        <a href="index.html#strings">Strings</a>
+        <a href="index.html#apparel">Apparel</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="cart-btn" href="index.html#shop" aria-label="Back to shop">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="service-page">
+    <div class="container">
+      <div class="service-page-head">
+        <span class="eyebrow eyebrow--light">Service · Coaching</span>
+        <h1>Book a lesson.</h1>
+        <p>1:1, pairs, or small group sessions with LTA-certified coaches. From first-time beginners to ranked juniors and adults sharpening their match game — we match the coach to your goal. From $45/hr.</p>
+      </div>
+
+      <form class="service-form" id="coachingForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="kName">Your name</label>
+            <input id="kName" name="name" type="text" required autocomplete="name" placeholder="First and last" />
+          </div>
+          <div class="field">
+            <label for="kEmail">Email</label>
+            <input id="kEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com" />
+          </div>
+          <div class="field">
+            <label for="kPhone">Phone (optional)</label>
+            <input id="kPhone" name="phone" type="tel" autocomplete="tel" placeholder="+1 555 123 4567" />
+          </div>
+          <div class="field">
+            <label for="kAge">Age group</label>
+            <select id="kAge" name="age" required>
+              <option value="">Pick an age group…</option>
+              <option>Adult (18+)</option>
+              <option>Junior (12–17)</option>
+              <option>Junior (7–11)</option>
+              <option>Tots (under 7)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="kLevel">Level</label>
+            <select id="kLevel" name="level" required>
+              <option value="">Pick your level…</option>
+              <option>Beginner</option>
+              <option>Intermediate</option>
+              <option>Advanced</option>
+              <option>Tournament / ranked</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="kFormat">Lesson format</label>
+            <select id="kFormat" name="format" required>
+              <option value="">Pick a format…</option>
+              <option>1:1 lesson</option>
+              <option>Pairs (2 players)</option>
+              <option>Small group (3–4 players)</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label>Preferred days</label>
+            <div class="chips-row" role="group" aria-label="Preferred days">
+              <label class="check-chip"><input type="checkbox" name="days" value="mon"/><span>Mon</span></label>
+              <label class="check-chip"><input type="checkbox" name="days" value="tue"/><span>Tue</span></label>
+              <label class="check-chip"><input type="checkbox" name="days" value="wed"/><span>Wed</span></label>
+              <label class="check-chip"><input type="checkbox" name="days" value="thu"/><span>Thu</span></label>
+              <label class="check-chip"><input type="checkbox" name="days" value="fri"/><span>Fri</span></label>
+              <label class="check-chip"><input type="checkbox" name="days" value="sat"/><span>Sat</span></label>
+              <label class="check-chip"><input type="checkbox" name="days" value="sun"/><span>Sun</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="kTime">Time of day</label>
+            <select id="kTime" name="time">
+              <option value="">No preference</option>
+              <option>Mornings (7am–12pm)</option>
+              <option>Afternoons (12pm–5pm)</option>
+              <option>Evenings (5pm–9pm)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="kFreq">Frequency</label>
+            <select id="kFreq" name="frequency">
+              <option value="">No preference</option>
+              <option>One-off lesson</option>
+              <option>Weekly</option>
+              <option>Twice a week</option>
+              <option>Block of 6 lessons</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="kGoals">Your goals</label>
+            <textarea id="kGoals" name="goals" rows="3" placeholder="What do you want to work on — technique, match prep, fitness, fun? Any injuries we should know about?"></textarea>
+          </div>
+        </div>
+        <div class="form-foot">
+          <button type="submit" class="btn btn-primary">Request a coach</button>
+          <span class="form-note">A coach reaches out within 24 hours with matching times.</span>
+        </div>
+      </form>
+
+      <div class="form-success" id="formSuccess" hidden>
+        <div class="form-success-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h2>Coaching request received.</h2>
+        <p>A coach matched to your level and goal will email within 24 hours with a few available slots. Your first 15-minute consult is free — no commitment.</p>
+        <a href="index.html" class="btn btn-primary">Back to home</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand brand--footer">
+          <span class="brand-mark"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8 H14 V12 H9 V26 H5 V12 H1 Z" fill="#1FA89A"/><circle cx="7" cy="5" r="2" fill="#D8FF3E"/><path d="M16 8 H20 V22 H31 V26 H16 Z" fill="#FFFFFF"/></svg></span>
+          <span class="brand-word"><span class="brand-t">Tennis</span> <span class="brand-l">Line</span></span>
+        </div>
+        <p class="muted">Tennis gear for every level. Shipped from London.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul><li><a href="index.html#racquets">Racquets</a></li><li><a href="index.html#strings">Strings</a></li><li><a href="index.html#apparel">Apparel</a></li></ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="stringing.html">Stringing</a></li><li><a href="court-hire.html">Court hire</a></li><li><a href="coaching.html">Coaching</a></li></ul>
+      </div>
+      <div>
+        <h4>Tennis Line</h4>
+        <ul><li><a href="index.html#about">About</a></li><li><a href="index.html">Home</a></li></ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Tennis Line Ltd.</span>
+      <span class="muted">Made with topspin.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="config.js"></script>
+  <script>
+    try {
+      const cart = JSON.parse(localStorage.getItem('tennisline:cart') || '[]');
+      const count = cart.reduce((n, i) => n + (i.qty || 0), 0);
+      const cartEl = document.getElementById('cartCount');
+      if (cartEl) {
+        cartEl.textContent = count;
+        cartEl.style.display = count ? 'inline-flex' : 'none';
+      }
+    } catch {}
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('coachingForm');
+    const success = document.getElementById('formSuccess');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      const fd = new FormData(form);
+      const payload = {
+        name: fd.get('name'),
+        email: fd.get('email'),
+        phone: fd.get('phone') || null,
+        age_group: fd.get('age'),
+        level: fd.get('level'),
+        format: fd.get('format'),
+        preferred_days: fd.getAll('days'),
+        preferred_time: fd.get('time') || null,
+        frequency: fd.get('frequency') || null,
+        goals: fd.get('goals') || null,
+      };
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true; const orig = btn.textContent; btn.textContent = 'Sending…';
+      const { error } = await sb.from('coaching_requests').insert(payload);
+      btn.disabled = false; btn.textContent = orig;
+      if (error) {
+        alert("Sorry — that didn't go through.\n\n" + (error.message || 'Unknown error'));
+        return;
+      }
+      form.hidden = true;
+      success.hidden = false;
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tennis Line — Tennis Gear for Every Level</title>
+  <meta name="description" content="Tennis Line sells premium tennis racquets, strings and apparel for beginners to pros." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="brand" aria-label="Tennis Line home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 8 H14 V12 H9 V26 H5 V12 H1 Z" fill="#1FA89A"/>
+            <circle cx="7" cy="5" r="2" fill="#1F3357"/>
+            <path d="M16 8 H20 V22 H31 V26 H16 Z" fill="#1F3357"/>
+          </svg>
+        </span>
+        <span class="brand-word"><span class="brand-t">Tennis</span> <span class="brand-l">Line</span></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#racquets">Racquets</a>
+        <a href="#strings">Strings</a>
+        <a href="#apparel">Apparel</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <button class="cart-btn" id="cartToggle" aria-label="Open cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Tennis gear · Beginner to Pro</span>
+          <h1>Step to the <span class="hi-light">line</span>. Geared up by Tennis Line.</h1>
+          <p class="lede">Racquets dialled for your game, strings tuned to your swing, kit built to move. Honest gear, fast shipping, expert picks.</p>
+          <div class="hero-cta">
+            <a href="#shop" class="btn btn-primary">Shop the court</a>
+            <a href="#finder" class="btn btn-ghost">Find my racquet →</a>
+          </div>
+          <ul class="hero-points">
+            <li><strong>Free</strong> stringing on every racquet</li>
+            <li><strong>30-day</strong> demo returns</li>
+            <li><strong>Pro fitters</strong> on chat</li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="court">
+            <div class="court-lines"></div>
+            <div class="ball"></div>
+            <svg class="racquet" viewBox="0 0 200 360" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="frame" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#1F3357"/>
+                  <stop offset="1" stop-color="#1FA89A"/>
+                </linearGradient>
+              </defs>
+              <ellipse cx="100" cy="110" rx="78" ry="100" fill="none" stroke="url(#frame)" stroke-width="10"/>
+              <g stroke="#F5F1E6" stroke-width="1.4" opacity=".9">
+                <line x1="40" y1="50" x2="40" y2="170"/>
+                <line x1="60" y1="32" x2="60" y2="188"/>
+                <line x1="80" y1="22" x2="80" y2="198"/>
+                <line x1="100" y1="18" x2="100" y2="202"/>
+                <line x1="120" y1="22" x2="120" y2="198"/>
+                <line x1="140" y1="32" x2="140" y2="188"/>
+                <line x1="160" y1="50" x2="160" y2="170"/>
+                <line x1="30" y1="70" x2="170" y2="70"/>
+                <line x1="26" y1="90" x2="174" y2="90"/>
+                <line x1="24" y1="110" x2="176" y2="110"/>
+                <line x1="26" y1="130" x2="174" y2="130"/>
+                <line x1="30" y1="150" x2="170" y2="150"/>
+              </g>
+              <rect x="92" y="200" width="16" height="140" rx="6" fill="url(#frame)"/>
+              <rect x="86" y="240" width="28" height="100" rx="10" fill="#1F3357"/>
+              <g stroke="#D8FF3E" stroke-width="2">
+                <line x1="86" y1="260" x2="114" y2="260"/>
+                <line x1="86" y1="280" x2="114" y2="280"/>
+                <line x1="86" y1="300" x2="114" y2="300"/>
+                <line x1="86" y1="320" x2="114" y2="320"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-banners" id="services" aria-label="Services">
+      <div class="container">
+        <article class="banner banner--stringing">
+          <div class="banner-text">
+            <span class="banner-tag">Service · Stringing</span>
+            <h3>Pro stringing, 48-hour turnaround.</h3>
+            <p>Forty stocked strings — poly, multi, gut, hybrids. Free on every racquet bought from us, drop-off or post-in. Every job is logged with tension and gauge.</p>
+            <div class="banner-cta">
+              <a class="btn-banner" href="stringing.html">Book stringing →</a>
+              <span class="banner-price"><strong>$20</strong> per racquet</span>
+            </div>
+          </div>
+          <div class="banner-art">
+            <svg viewBox="0 0 280 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <ellipse cx="140" cy="100" rx="84" ry="92" fill="#FFFFFF" stroke="#1F3357" stroke-width="6"/>
+              <g stroke="#1FA89A" stroke-width="2.5" stroke-linecap="round">
+                <line x1="70" y1="40" x2="70" y2="160"/>
+                <line x1="92" y1="22" x2="92" y2="178"/>
+                <line x1="114" y1="14" x2="114" y2="186"/>
+                <line x1="136" y1="10" x2="136" y2="190"/>
+                <line x1="158" y1="10" x2="158" y2="190"/>
+                <line x1="180" y1="14" x2="180" y2="186"/>
+                <line x1="202" y1="22" x2="202" y2="178"/>
+                <line x1="226" y1="40" x2="226" y2="160"/>
+                <line x1="58" y1="60" x2="240" y2="60"/>
+                <line x1="50" y1="80" x2="248" y2="80"/>
+                <line x1="46" y1="100" x2="252" y2="100"/>
+                <line x1="50" y1="120" x2="248" y2="120"/>
+                <line x1="58" y1="140" x2="240" y2="140"/>
+              </g>
+              <path d="M232 56 L268 28" stroke="#D8FF3E" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="268" cy="28" r="6" fill="#D8FF3E" stroke="#1F3357" stroke-width="2"/>
+            </svg>
+          </div>
+        </article>
+
+        <article class="banner banner--court">
+          <div class="banner-text">
+            <span class="banner-tag">Service · Court hire</span>
+            <h3>Three outdoor courts.</h3>
+            <p>Hourly slots, 7am–9pm, floodlit until close. Members get priority booking; walk-ons welcome. Racquets and balls available on site.</p>
+            <div class="banner-cta">
+              <a class="btn-banner" href="court-hire.html">Reserve a court →</a>
+              <span class="banner-price">from <strong>$24</strong>/hr</span>
+            </div>
+          </div>
+          <div class="banner-art">
+            <svg viewBox="0 0 280 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="28" y="20" width="224" height="160" rx="6" fill="#1F3357"/>
+              <rect x="40" y="32" width="200" height="136" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+              <line x1="140" y1="32" x2="140" y2="168" stroke="#FFFFFF" stroke-width="2.5"/>
+              <line x1="40" y1="60" x2="240" y2="60" stroke="#FFFFFF" stroke-width="2"/>
+              <line x1="40" y1="140" x2="240" y2="140" stroke="#FFFFFF" stroke-width="2"/>
+              <line x1="20" y1="100" x2="260" y2="100" stroke="#1FA89A" stroke-width="4"/>
+              <g stroke="#FFFFFF" stroke-width="1" opacity=".5">
+                <line x1="40" y1="100" x2="240" y2="100" stroke-dasharray="3 4"/>
+              </g>
+              <circle cx="186" cy="70" r="10" fill="#D8FF3E" stroke="#1F3357" stroke-width="2"/>
+            </svg>
+          </div>
+        </article>
+
+        <article class="banner banner--coaching">
+          <div class="banner-text">
+            <span class="banner-tag">Service · Coaching</span>
+            <h3>Lessons from LTA-certified pros.</h3>
+            <p>1:1, pairs, or small group sessions. Beginners through to ranked juniors and adults sharpening their match game. We match the coach to your goal.</p>
+            <div class="banner-cta">
+              <a class="btn-banner" href="coaching.html">Book a lesson →</a>
+              <span class="banner-price">from <strong>$45</strong>/hr</span>
+            </div>
+          </div>
+          <div class="banner-art">
+            <svg viewBox="0 0 280 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="130" cy="44" r="20" fill="#1F3357"/>
+              <path d="M104 70 Q130 102 156 70 L172 192 H150 L130 122 L110 192 H88 Z" fill="#1F3357"/>
+              <path d="M150 78 Q198 36 222 10" stroke="#1F3357" stroke-width="8" stroke-linecap="round" fill="none"/>
+              <g transform="rotate(25 226 12)">
+                <ellipse cx="226" cy="12" rx="20" ry="24" fill="none" stroke="#1FA89A" stroke-width="4"/>
+                <g stroke="#1FA89A" stroke-width="1.2" opacity=".7">
+                  <line x1="208" y1="4" x2="244" y2="4"/>
+                  <line x1="208" y1="12" x2="244" y2="12"/>
+                  <line x1="208" y1="20" x2="244" y2="20"/>
+                  <line x1="218" y1="-9" x2="218" y2="25"/>
+                  <line x1="226" y1="-12" x2="226" y2="28"/>
+                  <line x1="234" y1="-9" x2="234" y2="25"/>
+                </g>
+              </g>
+              <circle cx="42" cy="92" r="12" fill="#D8FF3E" stroke="#1F3357" stroke-width="2"/>
+              <g stroke="#1FA89A" stroke-width="3" stroke-linecap="round" opacity=".5">
+                <line x1="14" y1="84" x2="32" y2="86"/>
+                <line x1="12" y1="96" x2="30" y2="96"/>
+                <line x1="14" y1="108" x2="32" y2="106"/>
+              </g>
+            </svg>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="finder" id="finder">
+      <div class="container">
+        <div class="finder-head">
+          <h2>What's your level?</h2>
+          <p>Filter the shop in one tap. Change anytime.</p>
+        </div>
+        <div class="levels" role="tablist" aria-label="Player level">
+          <button class="level" data-level="all" aria-pressed="true">All players</button>
+          <button class="level" data-level="beginner">Beginner</button>
+          <button class="level" data-level="intermediate">Intermediate</button>
+          <button class="level" data-level="advanced">Advanced</button>
+          <button class="level" data-level="pro">Pro</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop" id="shop">
+      <div class="container">
+        <div class="shop-head">
+          <div class="tabs" role="tablist" aria-label="Category">
+            <button class="tab" data-cat="all" aria-pressed="true">All gear</button>
+            <button class="tab" data-cat="racquets">Racquets</button>
+            <button class="tab" data-cat="strings">Strings</button>
+            <button class="tab" data-cat="apparel">Apparel</button>
+          </div>
+          <div class="sort">
+            <label for="sortSelect">Sort</label>
+            <select id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="name">Name A–Z</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="empty" id="empty" hidden>
+          <p>No gear matches that combo. Try widening the level or category.</p>
+        </div>
+
+        <div class="grid" id="grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="anchors">
+      <div class="container">
+        <a id="racquets" class="anchor-link"></a>
+        <a id="strings" class="anchor-link"></a>
+        <a id="apparel" class="anchor-link"></a>
+      </div>
+    </section>
+
+    <section class="promise" id="about">
+      <div class="container promise-grid">
+        <div>
+          <h2>Built by players, for players.</h2>
+          <p>Tennis Line started in a corner of a club pro shop. We picked gear we'd actually use, then asked our junior squad, weekend warriors and ranked players to break it. What you see on the site survived.</p>
+          <p>Every racquet is fitted and strung free in-house. Every string job is logged with tension, gauge and date. Every order ships with a hand-written setup card.</p>
+        </div>
+        <div class="promise-stats">
+          <div><strong>120+</strong><span>Models stocked</span></div>
+          <div><strong>48h</strong><span>Average stringing</span></div>
+          <div><strong>4.9★</strong><span>From 6,200 reviews</span></div>
+          <div><strong>0</strong><span>Restocking fees</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand brand--footer">
+          <span class="brand-mark"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8 H14 V12 H9 V26 H5 V12 H1 Z" fill="#1FA89A"/><circle cx="7" cy="5" r="2" fill="#D8FF3E"/><path d="M16 8 H20 V22 H31 V26 H16 Z" fill="#FFFFFF"/></svg></span>
+          <span class="brand-word"><span class="brand-t">Tennis</span> <span class="brand-l">Line</span></span>
+        </div>
+        <p class="muted">Tennis gear for every level. Shipped from London.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul><li><a href="#racquets">Racquets</a></li><li><a href="#strings">Strings</a></li><li><a href="#apparel">Apparel</a></li></ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul><li><a href="#">Stringing service</a></li><li><a href="#">Returns</a></li><li><a href="#">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4>Stay in the loop</h4>
+        <form class="news" id="newsForm">
+          <input type="email" placeholder="you@tennismail.com" aria-label="Email" required />
+          <button class="btn btn-primary" type="submit">Join</button>
+        </form>
+        <p class="muted news-note" id="newsNote"></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Tennis Line Ltd.</span>
+      <span class="muted">Made with topspin.</span>
+    </div>
+  </footer>
+
+  <aside class="cart-panel" id="cartPanel" aria-hidden="true" aria-label="Shopping cart">
+    <div class="cart-head">
+      <h3>Your bag</h3>
+      <button class="icon-btn" id="cartClose" aria-label="Close cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Subtotal</span><strong id="cartTotal">$0</strong></div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn" disabled>Checkout</button>
+      <p class="muted small">Free shipping over $75 · Free stringing</p>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="chatbot" id="chatbot">
+    <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open racquet finder" aria-expanded="false">
+      <span class="chatbot-pulse" aria-hidden="true"></span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+      </svg>
+      <span>Choose my tennis racquet</span>
+    </button>
+
+    <div class="chatbot-panel" id="chatbotPanel" role="dialog" aria-label="Racquet finder" aria-hidden="true">
+      <div class="chatbot-head">
+        <div>
+          <strong>Choose my tennis racquet</strong>
+          <span class="chatbot-sub">3 quick questions</span>
+        </div>
+        <button class="icon-btn chatbot-close-btn" id="chatbotClose" aria-label="Close chat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="chatbot-body" id="chatbotBody"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

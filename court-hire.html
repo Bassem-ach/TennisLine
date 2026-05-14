@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Court Hire — Tennis Line</title>
+  <meta name="description" content="Reserve one of Tennis Line's three outdoor courts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Tennis Line home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 8 H14 V12 H9 V26 H5 V12 H1 Z" fill="#1FA89A"/>
+            <circle cx="7" cy="5" r="2" fill="#1F3357"/>
+            <path d="M16 8 H20 V22 H31 V26 H16 Z" fill="#1F3357"/>
+          </svg>
+        </span>
+        <span class="brand-word"><span class="brand-t">Tennis</span> <span class="brand-l">Line</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#racquets">Racquets</a>
+        <a href="index.html#strings">Strings</a>
+        <a href="index.html#apparel">Apparel</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="cart-btn" href="index.html#shop" aria-label="Back to shop">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="service-page">
+    <div class="container">
+      <div class="service-page-head">
+        <span class="eyebrow eyebrow--light">Service · Court hire</span>
+        <h1>Reserve a court.</h1>
+        <p>Three outdoor courts, $24/hr. Open 7am–9pm with floodlights until close. Members get priority booking; walk-ons welcome. Racquets and balls available on site.</p>
+      </div>
+
+      <form class="service-form" id="courtForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="cName">Your name</label>
+            <input id="cName" name="name" type="text" required autocomplete="name" placeholder="First and last" />
+          </div>
+          <div class="field">
+            <label for="cEmail">Email</label>
+            <input id="cEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com" />
+          </div>
+          <div class="field">
+            <label for="cPhone">Phone (optional)</label>
+            <input id="cPhone" name="phone" type="tel" autocomplete="tel" placeholder="+1 555 123 4567" />
+          </div>
+          <div class="field">
+            <label for="cPlayers">Players</label>
+            <select id="cPlayers" name="players" required>
+              <option value="">Pick a group size…</option>
+              <option>1 (solo / lesson / wall)</option>
+              <option>2 (singles)</option>
+              <option>3</option>
+              <option>4 (doubles)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cDate">Date</label>
+            <input id="cDate" name="date" type="date" required />
+          </div>
+          <div class="field">
+            <label for="cStart">Start time</label>
+            <select id="cStart" name="start" required>
+              <option value="">Pick a start time…</option>
+              <option>7:00 AM</option>
+              <option>8:00 AM</option>
+              <option>9:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+              <option>1:00 PM</option>
+              <option>2:00 PM</option>
+              <option>3:00 PM</option>
+              <option>4:00 PM</option>
+              <option>5:00 PM</option>
+              <option>6:00 PM</option>
+              <option>7:00 PM</option>
+              <option>8:00 PM</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cDuration">Duration</label>
+            <select id="cDuration" name="duration" required>
+              <option value="">Pick a duration…</option>
+              <option>1 hour</option>
+              <option>1.5 hours</option>
+              <option>2 hours</option>
+              <option>3 hours</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cCourt">Court preference</label>
+            <select id="cCourt" name="court">
+              <option>Any of our 3 outdoor courts</option>
+              <option>Court 1</option>
+              <option>Court 2</option>
+              <option>Court 3</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="cNotes">Notes (optional)</label>
+            <textarea id="cNotes" name="notes" rows="3" placeholder="Anything we should know — gear hire, first visit, etc."></textarea>
+          </div>
+        </div>
+        <div class="form-foot">
+          <button type="submit" class="btn btn-primary">Reserve court</button>
+          <span class="form-note">$24/hr. We confirm by email within 1 hour during opening times.</span>
+        </div>
+      </form>
+
+      <div class="form-success" id="formSuccess" hidden>
+        <div class="form-success-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h2>Court request received.</h2>
+        <p>We'll email you within an hour to confirm availability and lock in your slot. Payment ($24/hr) happens on the day at the clubhouse or via the link in your confirmation email.</p>
+        <a href="index.html" class="btn btn-primary">Back to home</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand brand--footer">
+          <span class="brand-mark"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8 H14 V12 H9 V26 H5 V12 H1 Z" fill="#1FA89A"/><circle cx="7" cy="5" r="2" fill="#D8FF3E"/><path d="M16 8 H20 V22 H31 V26 H16 Z" fill="#FFFFFF"/></svg></span>
+          <span class="brand-word"><span class="brand-t">Tennis</span> <span class="brand-l">Line</span></span>
+        </div>
+        <p class="muted">Tennis gear for every level. Shipped from London.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul><li><a href="index.html#racquets">Racquets</a></li><li><a href="index.html#strings">Strings</a></li><li><a href="index.html#apparel">Apparel</a></li></ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="stringing.html">Stringing</a></li><li><a href="court-hire.html">Court hire</a></li><li><a href="coaching.html">Coaching</a></li></ul>
+      </div>
+      <div>
+        <h4>Tennis Line</h4>
+        <ul><li><a href="index.html#about">About</a></li><li><a href="index.html">Home</a></li></ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Tennis Line Ltd.</span>
+      <span class="muted">Made with topspin.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="config.js"></script>
+  <script>
+    try {
+      const cart = JSON.parse(localStorage.getItem('tennisline:cart') || '[]');
+      const count = cart.reduce((n, i) => n + (i.qty || 0), 0);
+      const cartEl = document.getElementById('cartCount');
+      if (cartEl) {
+        cartEl.textContent = count;
+        cartEl.style.display = count ? 'inline-flex' : 'none';
+      }
+    } catch {}
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Min date = today
+    const dateInput = document.getElementById('cDate');
+    if (dateInput) {
+      const today = new Date();
+      const iso = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
+      dateInput.min = iso;
+    }
+
+    function parseTime(t) {
+      const m = String(t || '').match(/(\d+):(\d+)\s*(AM|PM)/i);
+      if (!m) return null;
+      let h = parseInt(m[1], 10);
+      const min = parseInt(m[2], 10);
+      const period = m[3].toUpperCase();
+      if (period === 'PM' && h !== 12) h += 12;
+      if (period === 'AM' && h === 12) h = 0;
+      return { h, min };
+    }
+    function durationMinutes(d) {
+      switch (d) {
+        case '1 hour': return 60;
+        case '1.5 hours': return 90;
+        case '2 hours': return 120;
+        case '3 hours': return 180;
+        default: return 60;
+      }
+    }
+    function courtIdFrom(label) {
+      const m = String(label || '').match(/^Court (\d+)$/);
+      return m ? parseInt(m[1], 10) : null;   // "Any of our 3 outdoor courts" → null
+    }
+
+    const form = document.getElementById('courtForm');
+    const success = document.getElementById('formSuccess');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      const fd = new FormData(form);
+      const [y, mo, da] = String(fd.get('date')).split('-').map(Number);
+      const t = parseTime(fd.get('start'));
+      if (!t || !y) { alert('Please pick a valid date and start time.'); return; }
+      const startAt = new Date(y, mo - 1, da, t.h, t.min, 0);
+      const endAt = new Date(startAt.getTime() + durationMinutes(fd.get('duration')) * 60000);
+      const payload = {
+        name: fd.get('name'),
+        email: fd.get('email'),
+        phone: fd.get('phone') || null,
+        players: fd.get('players'),
+        court_id: courtIdFrom(fd.get('court')),
+        start_at: startAt.toISOString(),
+        end_at: endAt.toISOString(),
+        notes: fd.get('notes') || null,
+      };
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true; const orig = btn.textContent; btn.textContent = 'Reserving…';
+      const { error } = await sb.from('court_bookings').insert(payload);
+      btn.disabled = false; btn.textContent = orig;
+      if (error) {
+        const msg = error.message || '';
+        if (msg.toLowerCase().includes('exclude') || error.code === '23P01') {
+          alert("That court is already booked for that time slot. Please pick another time, court, or 'Any of our 3 outdoor courts'.");
+        } else {
+          alert("Sorry — that didn't go through.\n\n" + msg);
+        }
+        return;
+      }
+      form.hidden = true;
+      success.hidden = false;
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  </script>
+</body>
+</html>
